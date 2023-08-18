@@ -1,21 +1,18 @@
 <script>
   import "../app.css";
+  import Header from "$lib/header.svelte";
+  import Footer from "$lib/footer.svelte";
+  import Nav from "$lib/nav.svelte";
 </script>
 
 <div class="container-fluid d-flex flex-column min-vh-100 m-0 p-0">
-  <header>header</header>
+  <Header />
 
-  <nav class="navbar navbar-expand-lg">
-    <ul class="navbar-nav mx-auto">
-      <li class="nav-item"><a href="/" class="nav-link">home</a></li>
-      <li class="nav-item"><a href="/about" class="nav-link">about</a></li>
-      <li class="nav-item"><a href="/docs" class="nav-link">docs</a></li>
-    </ul>
-  </nav>
+  <Nav />
 
   <main class="flex-grow-1">
     <slot />
   </main>
 
-  <footer>footer</footer>
+  <Footer />
 </div>
